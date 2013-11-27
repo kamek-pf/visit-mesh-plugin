@@ -193,6 +193,7 @@ avtMeshFileFormat::GetVar(const char *varname)
 void avtMeshFileFormat::ReadData()
 {
     std::ifstream ifile(m_filename);
+    if(ifile == NULL) return;
 
     std::string line, tmp;
     std::stringstream ss;
